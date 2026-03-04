@@ -16,7 +16,7 @@ void main() {
   String? firstnput = stdin.readLineSync();
   double num1 = double.parse(firstnput!);
 
-  stdout.write(" Operators ");
+  stdout.write("Operators ( + - * /)");
   stdin.readLineSync();
 
   stdout.write("Enter Second Number ");
