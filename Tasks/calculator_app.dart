@@ -43,20 +43,20 @@ void main() {
     number1 -= result1;
     number2 -= result2;
     double result = number1 - number2;
-    print("Addition Result is $result");
+    print("Subtraction Result is $result");
   }
 
-  void Multiplication() {
+  void multiplication() {
     double result1 = num1;
     double result2 = num2;
 
     number1 *= result1;
     number2 *= result2;
     double result = number1 * number2;
-    print("Addition Result is $result");
+    print("Multiplication Result is $result");
   }
 
   addition();
   subtraction();
-  Multiplication();
+  multiplication();
 }
