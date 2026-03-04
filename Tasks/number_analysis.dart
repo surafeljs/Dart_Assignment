@@ -3,7 +3,9 @@ import 'dart:io';
 void main() {
   List<int> numbers = [12, 58, 45, 26, 1, 58, 10, 20];
   stdout.writeln('List [12, 58, 45, 26, 1, 58, 10, 20]');
-  stdout.writeln('Choose option:');
+  stdout.writeln('==================================');
+
+  stdout.writeln('Choose option (1 - 5 ):');
   stdout.writeln('1. Sum');
   stdout.writeln('2. Avarage');
   stdout.writeln('3. Even And Odd');
@@ -12,7 +14,7 @@ void main() {
 
   int sum = 0;
   double avarage = 0.0;
-  stdout.writeln('--------------------------------------');
+  stdout.writeln('==================================');
   bool open = true;
   void sums() {
     for (var i = 0; i < numbers.length; i++) {
@@ -66,23 +68,29 @@ void main() {
   while (open) {
     String? input = stdin.readLineSync();
     int choice = int.parse(input!);
-    switch (choice) {
-      case 1:
-        sums();
-        break;
-      case 2:
-        Avarage();
-        break;
-      case 3:
-        evenAndOdd();
-        break;
-      case 4:
-        min();
-      case 5:
-        max();
-      default:
+    if (choice < 1 || choice > 5) {
+      print("Please enter number between 1 and 5");
+      return;
+    } else {
+      switch (choice) {
+        case 1:
+          sums();
+          break;
+        case 2:
+          Avarage();
+          break;
+        case 3:
+          evenAndOdd();
+          break;
+        case 4:
+          min();
+        case 5:
+          max();
+        default:
+      }
     }
-    stdout.writeln('--------------------------------------');
+
+    stdout.writeln('==================================');
     stdout.writeln('Choose option:');
     stdout.writeln('1. Sum');
     stdout.writeln('2. Avarage');
