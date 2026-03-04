@@ -10,12 +10,10 @@ void main() {
   stdout.writeln('4. Min');
   stdout.writeln('5. Max');
 
-  String? input = stdin.readLineSync();
-  int choice = int.parse(input!);
   int sum = 0;
   double avarage = 0.0;
   stdout.writeln('--------------------------------------');
-
+  bool open = true;
   void sums() {
     for (var i = 0; i < numbers.length; i++) {
       sum += numbers[i];
@@ -65,20 +63,31 @@ void main() {
     print('Max = $num');
   }
 
-  switch (choice) {
-    case 1:
-      sums();
-      break;
-    case 2:
-      Avarage();
-      break;
-    case 3:
-      evenAndOdd();
-      break;
-    case 4:
-      min();
-    case 5:
-      max();
-    default:
+  while (open) {
+    String? input = stdin.readLineSync();
+    int choice = int.parse(input!);
+    switch (choice) {
+      case 1:
+        sums();
+        break;
+      case 2:
+        Avarage();
+        break;
+      case 3:
+        evenAndOdd();
+        break;
+      case 4:
+        min();
+      case 5:
+        max();
+      default:
+    }
+    stdout.writeln('--------------------------------------');
+    stdout.writeln('Choose option:');
+    stdout.writeln('1. Sum');
+    stdout.writeln('2. Avarage');
+    stdout.writeln('3. Even And Odd');
+    stdout.writeln('4. Min');
+    stdout.writeln('5. Max');
   }
 }
