@@ -6,6 +6,8 @@ void main() {
   stdout.writeln("2. Subtraction");
   stdout.writeln("3. Multiplication");
   stdout.writeln("4. Division");
+  stdout.writeln("5. Clean");
+
   stdout.writeln("================================");
 
   stdout.write("Choose an option (1-4): ");
