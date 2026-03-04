@@ -36,5 +36,27 @@ void main() {
     print("Addition Result is $result");
   }
 
+  void subtraction() {
+    double result1 = num1;
+    double result2 = num2;
+
+    number1 -= result1;
+    number2 -= result2;
+    double result = number1 - number2;
+    print("Addition Result is $result");
+  }
+
+  void Multiplication() {
+    double result1 = num1;
+    double result2 = num2;
+
+    number1 *= result1;
+    number2 *= result2;
+    double result = number1 * number2;
+    print("Addition Result is $result");
+  }
+
   addition();
+  subtraction();
+  Multiplication();
 }
