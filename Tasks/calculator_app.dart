@@ -33,23 +33,25 @@ class Calculator {
 
 Future<void> main() async {
   try {
-    stdout.write("Choose option: \n");
-
-    stdout.writeln("1. Add");
-    stdout.writeln("2. Subtract");
-    stdout.writeln("3. Multiply");
-    stdout.writeln("4. Divide");
-    int choice = int.parse(stdin.readLineSync()!);
     double result;
     bool open = true;
 
     while (open) {
+      stdout.write("Choose option: \n");
+
+      stdout.writeln("1. Add");
+      stdout.writeln("2. Subtract");
+      stdout.writeln("3. Multiply");
+      stdout.writeln("4. Divide");
+      int choice = int.parse(stdin.readLineSync()!);
+
       stdout.write("Enter first number: ");
       double n1 = double.parse(stdin.readLineSync()!);
 
       stdout.write("Enter second number: ");
       double n2 = double.parse(stdin.readLineSync()!);
       Calculator calc = Calculator(n1, n2);
+      stdout.write("------------------------------------- ");
 
       switch (choice) {
         case 1:
