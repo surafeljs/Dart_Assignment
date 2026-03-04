@@ -33,42 +33,43 @@ class Calculator {
 
 Future<void> main() async {
   try {
-    stdout.write("Enter first number: ");
-    double n1 = double.parse(stdin.readLineSync()!);
-
-    stdout.write("Enter second number: ");
-    double n2 = double.parse(stdin.readLineSync()!);
-
-    Calculator calc = Calculator(n1, n2);
+    stdout.write("Choose option: \n");
 
     stdout.writeln("1. Add");
     stdout.writeln("2. Subtract");
     stdout.writeln("3. Multiply");
     stdout.writeln("4. Divide");
-
-    stdout.write("Choose option: ");
     int choice = int.parse(stdin.readLineSync()!);
-
     double result;
+    bool open = true;
 
-    switch (choice) {
-      case 1:
-        result = await calc.add();
-        break;
-      case 2:
-        result = await calc.subtract();
-        break;
-      case 3:
-        result = await calc.multiply();
-        break;
-      case 4:
-        result = await calc.divide();
-        break;
-      default:
-        throw Exception("Invalid choice");
+    while (open) {
+      stdout.write("Enter first number: ");
+      double n1 = double.parse(stdin.readLineSync()!);
+
+      stdout.write("Enter second number: ");
+      double n2 = double.parse(stdin.readLineSync()!);
+      Calculator calc = Calculator(n1, n2);
+
+      switch (choice) {
+        case 1:
+          result = await calc.add();
+          break;
+        case 2:
+          result = await calc.subtract();
+          break;
+        case 3:
+          result = await calc.multiply();
+          break;
+        case 4:
+          result = await calc.divide();
+          break;
+        default:
+          throw Exception("Invalid choice");
+      }
+
+      print("Result: $result");
     }
-
-    print("Result: $result");
   } catch (e) {
     print("Error: $e");
   }
