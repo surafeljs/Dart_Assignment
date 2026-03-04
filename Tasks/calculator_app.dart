@@ -10,17 +10,31 @@ void main() {
 
   stdout.write("Choose an option (1-4): ");
   String? choiceInput = stdin.readLineSync();
-  int choice = int.parse(choiceInput!);
+  double choice = double.parse(choiceInput!);
 
   stdout.write("Enter First Number ");
   String? firstnput = stdin.readLineSync();
-  int num1 = int.parse(firstnput!);
+  double num1 = double.parse(firstnput!);
 
   stdout.write(" Operators ");
-  String? Operators = stdin.readLineSync();
+  stdin.readLineSync();
 
   stdout.write("Enter Second Number ");
 
   String? secondInput = stdin.readLineSync();
-  int num2 = int.parse(secondInput!);
+  double num2 = double.parse(secondInput!);
+
+  double number1 = 0;
+  double number2 = 0;
+  void addition() {
+    double result1 = num1;
+    double result2 = num2;
+
+    number1 += result1;
+    number2 += result2;
+    double result = number1 + number2;
+    print("Addition Result is $result");
+  }
+
+  addition();
 }
