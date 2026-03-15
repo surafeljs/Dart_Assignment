@@ -1,10 +1,10 @@
 ---
 ## Group Members ........ Id
 
-1.Surafel Delelegn    ATE/3643/15
-2.Hanna Habte        ATE/2217/15 
-3.Kaleab Biruk         ATE/5894/14
-4.Tariku Adugna        ATE/0996/15
+*1.Surafel Delelegn    ATE/3643/15
+*2.Hanna Habte        ATE/2217/15 
+*3.Kaleab Biruk         ATE/5894/14
+*4.Tariku Adugna        ATE/0996/15
 ---
 # 📱 Dart Calculator & Number Analysis
 
